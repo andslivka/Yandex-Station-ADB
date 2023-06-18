@@ -1,0 +1,15 @@
+#Shutdown TV    
+switch:
+  - platform: wake_on_lan
+    mac: ec:fa:5c:88:79:3f
+    host: 192.168.0.0
+#TV Room
+media_player:
+
+  - platform: androidtv
+    name: Tv kitchen
+    device_class: androidtv
+    host: 192.168.0.0
+    adb_server_ip: 127.0.0.1
+    adb_server_port: 5037
+    get_sources: false

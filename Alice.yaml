@@ -1,0 +1,58 @@
+'23':
+  alias: Прибавь звук
+  sequence:
+  - data:
+      command: VOLUME_UP
+      entity_id: media_player.fire_tv
+    service: androidtv.adb_command
+  - data:
+      command: VOLUME_UP
+      entity_id: media_player.fire_tv
+    service: androidtv.adb_command
+  - data:
+      command: VOLUME_UP
+      entity_id: media_player.fire_tv
+    service: androidtv.adb_command
+'24':
+  alias: Сделай тише
+  sequence:
+  - data:
+      command: VOLUME_DOWN
+      entity_id: media_player.fire_tv
+    service: androidtv.adb_command
+  - data:
+      command: VOLUME_DOWN
+      entity_id: media_player.fire_tv
+    service: androidtv.adb_command
+  - data:
+      command: VOLUME_DOWN
+      entity_id: media_player.fire_tv
+    service: androidtv.adb_command
+'25':
+  alias: HD box
+  sequence:
+  - service: androidtv.adb_command
+    entity_id: media_player.fire_tv
+    data:
+      command: am start -a android.intent.action.VIEW -d -n dkc.video.hdbox/com.dkc.fs.ui.activities.HomeActivity
+'26':
+  alias: Включи каналы
+  sequence:
+  - service: androidtv.adb_command
+    entity_id: media_player.fire_tv
+    data:
+      command: am start -a android.intent.action.VIEW -d -n com.mediatek.wwtv.tvcenter/com.mediatek.wwtv.tvcenter.nav.TurnkeyUiMainActivity
+'27':
+  alias: Выключи телевизор
+  sequence:
+  - service: androidtv.adb_command
+    entity_id: media_player.fire_tv
+    data:
+      command: POWER
+'28':
+  alias: Выключи звук
+  sequence:
+  - service: androidtv.adb_command
+    entity_id: media_player.fire_tv
+    data:
+      command: MUTE
